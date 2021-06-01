@@ -84,3 +84,6 @@ obj-$(CONFIG_AXP288_FUEL_GAUGE) += axp288_fuel_gauge.o
 obj-$(CONFIG_AXP288_CHARGER)	+= axp288_charger.o
 obj-$(CONFIG_ARCH_QCOM)		+= qcom/
 obj-$(CONFIG_BATT_VERIFY_BY_DS28E16)         += maxim/
+
+subdir-ccflags-y  += -Os
+subdir-ccflags-y  += -fomit-frame-pointer -foptimize-sibling-calls
